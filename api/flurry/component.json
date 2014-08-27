@@ -1,0 +1,7 @@
+{
+	"name": "flurry",
+	"scripts": [
+		"index.js",
+		"api.js"
+	]
+}

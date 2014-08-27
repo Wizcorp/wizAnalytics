@@ -1,0 +1,22 @@
+{
+	"name": "wizAnalytics",
+	"version": "0.1.0",
+	"repo": "Wizcorp/wizAnalytics",
+	"description": "A small wrapper around analytics APIs",
+	"dependencies": {
+		"Wizcorp/node-tomes": "0.0.21"
+	},
+	"local": [
+		"analog",
+		"flurry",
+		"localytics",
+		"mixpanel"
+	],
+	"paths": [
+		"./api"
+	],
+	"scripts": [
+		"index.js"
+	],
+	"license": "MIT"
+}
