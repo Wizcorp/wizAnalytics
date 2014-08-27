@@ -4,7 +4,7 @@ var registeredApi = [];
 
 function register(apiName, token, config) {
 	try {
-		var api = require(apiName);
+		var api = require('./api/' + apiName + '/index.js');
 		api.init(token, config);
 		registeredApi.push(api);
 	} catch (e) {

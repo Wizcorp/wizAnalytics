@@ -1,7 +1,0 @@
-{
-	"name": "mixpanel",
-	"scripts": [
-		"index.js",
-		"api.js"
-	]
-}

@@ -1,7 +1,0 @@
-{
-	"name": "localytics",
-	"scripts": [
-		"index.js",
-		"api.js"
-	]
-}

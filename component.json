@@ -6,17 +6,15 @@
 	"dependencies": {
 		"Wizcorp/node-tomes": "0.0.21"
 	},
-	"local": [
-		"analog",
-		"flurry",
-		"localytics",
-		"mixpanel"
-	],
-	"paths": [
-		"./api"
-	],
 	"scripts": [
-		"index.js"
+		"index.js",
+		"api/analog/index.js",
+		"api/flurry/index.js",
+		"api/flurry/api.js",
+		"api/localytics/index.js",
+		"api/localytics/api.js",
+		"api/mixpanel/index.js",
+		"api/mixpanel/api.js"
 	],
 	"license": "MIT"
 }
