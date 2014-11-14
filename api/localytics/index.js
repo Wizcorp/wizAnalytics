@@ -1,5 +1,7 @@
 exports.name = 'localytics';
 
+var defaultDimension;
+
 /**
  * @param {string} token
  * @param {Object} [options] - options required by Localytics
@@ -19,6 +21,8 @@ exports.init = function (token, options) {
 
 	// Create an instance of LocalyticsSession
 	exports._localyticsSession = localyticsSession(token, options);
+
+	defaultDimension = options.defaultDimension;
 
 	// Open a new session
 	exports._localyticsSession.open();
@@ -55,7 +59,7 @@ var timeoutId = null;
  * @param {Object} data
  */
 exports.log = function (name, data) {
-	exports._localyticsSession.tagEvent(name, data);
+	exports._localyticsSession.tagEvent(name, data, defaultDimension);
 
 	if (timeoutId) {
 		return;
@@ -81,9 +85,7 @@ exports.screen = function (viewName) {
  * @param {number} price
  * @param {Object} data
  */
-exports.revenue = function (price, data) {
-	data = data || {};
-	var customDimension = [data.itemName || 'unknown', data.location];
-	exports._localyticsSession.tagEvent('revenue', data, customDimension, price);
+exports.revenue = function (price, customDimension) {
+	exports._localyticsSession.tagEvent('revenue', customDimension, price);
 	exports._localyticsSession.upload();
 };
