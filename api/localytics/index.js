@@ -86,6 +86,6 @@ exports.screen = function (viewName) {
  * @param {Object} data
  */
 exports.revenue = function (price, customDimension) {
-	exports._localyticsSession.tagEvent('revenue', customDimension, price);
+	exports._localyticsSession.tagEvent('revenue', { price: price }, customDimension, price);
 	exports._localyticsSession.upload();
 };
