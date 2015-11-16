@@ -1,5 +1,3 @@
-var Tome = require('tomes').Tome;
-
 var registeredApi = [];
 
 function register(apiName, token, config) {
@@ -25,7 +23,7 @@ function freeze(userId, data) {
 
 		if (api.register) {
 			try {
-				api.register(Tome.unTome(data));
+				api.register(data);
 			} catch (e) {
 				console.error("Analytics Error: couldn't freeze data", api.name, e);
 			}
@@ -34,7 +32,6 @@ function freeze(userId, data) {
 }
 
 function send(eventName, data) {
-	data = Tome.unTome(data);
 	for (var i = 0; i < registeredApi.length; i += 1) {
 		var api = registeredApi[i];
 		try {

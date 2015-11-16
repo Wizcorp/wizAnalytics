@@ -1,11 +1,8 @@
 {
 	"name": "wizAnalytics",
-	"version": "0.1.4",
+	"version": "0.2.0",
 	"repo": "Wizcorp/wizAnalytics",
 	"description": "A small wrapper around analytics APIs",
-	"dependencies": {
-		"Wizcorp/node-tomes": "0.0.21"
-	},
 	"scripts": [
 		"index.js",
 		"api/analog/index.js",
