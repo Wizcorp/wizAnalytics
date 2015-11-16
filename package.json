@@ -1,0 +1,22 @@
+{
+  "name": "wizanalytics",
+  "version": "0.1.4",
+  "description": "A small wrapper around analytics APIs",
+  "main": "index.js",
+  "dependencies": {
+		"tomes": "0.0.21"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wizcorp/wizAnalytics.git"
+  },
+  "author": "Wizcorp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wizcorp/wizAnalytics/issues"
+  },
+  "homepage": "https://github.com/Wizcorp/wizAnalytics#readme"
+}
